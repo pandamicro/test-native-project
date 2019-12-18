@@ -1,0 +1,8 @@
+{
+    "ndk_module_path" :[
+        "/Users/panda/StudyWork/Cocos/fireball/cocos2d-x",
+        "/Users/panda/StudyWork/Cocos/fireball/cocos2d-x/cocos",
+        "/Users/panda/StudyWork/Cocos/fireball/cocos2d-x/external"
+    ],
+    "copy_resources": []
+}
