@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3B0B58B1-2734-488E-A542-ECEC11EB2455}</ProjectGuid>
     <RootNamespace>Helloworld</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -40,13 +41,13 @@
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="/Users/panda/StudyWork/Cocos/fireball/cocos2d-x\build\cocos2dx.props" />
-    <Import Project="/Users/panda/StudyWork/Cocos/fireball/cocos2d-x\build\cocos2d_headers.props" />
+    <Import Project="..\..\..\..\cocos2d-x-lite\build\cocos2dx.props" />
+    <Import Project="..\..\..\..\cocos2d-x-lite\build\cocos2d_headers.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="/Users/panda/StudyWork/Cocos/fireball/cocos2d-x\build\cocos2dx.props" />
-    <Import Project="/Users/panda/StudyWork/Cocos/fireball/cocos2d-x\build\cocos2d_headers.props" />
+    <Import Project="..\..\..\..\cocos2d-x-lite\build\cocos2dx.props" />
+    <Import Project="..\..\..\..\cocos2d-x-lite\build\cocos2d_headers.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -128,7 +129,8 @@
 xcopy "$(ProjectDir)..\..\..\res" "$(OutDir)\res" /D /E /I /F /Y
 xcopy "$(ProjectDir)..\..\..\jsb-adapter" "$(OutDir)\jsb-adapter" /D /E /I /F /Y
 copy "$(ProjectDir)..\..\..\main.js" "$(OutDir)\" /Y
-copy "$(ProjectDir)..\..\..\project.json" "$(OutDir)\" /Y</Command>
+copy "$(ProjectDir)..\..\..\project.json" "$(OutDir)\" /Y
+copy "$(ProjectDir)..\..\..\cocos3d-js.js" "$(OutDir)\" /Y</Command>
       <Outputs>$(TargetName).cab</Outputs>
       <Inputs>$(TargetFileName)</Inputs>
     </CustomBuildStep>
