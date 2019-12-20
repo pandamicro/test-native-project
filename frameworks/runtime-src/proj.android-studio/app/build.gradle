@@ -20,9 +20,9 @@ android {
                     targets 'cocos2djs'
                     arguments 'NDK_TOOLCHAIN_VERSION=clang'
                     
-                    def module_paths = [project.file("/Users/panda/StudyWork/Cocos/fireball/cocos2d-x"),
-                                        project.file("/Users/panda/StudyWork/Cocos/fireball/cocos2d-x/cocos"),
-                                        project.file("/Users/panda/StudyWork/Cocos/fireball/cocos2d-x/external")]
+                    def module_paths = [project.file("../../../../../cocos2d-x-lite"),
+                                        project.file("../../../../../cocos2d-x-lite/cocos"),
+                                        project.file("../../../../../cocos2d-x-lite/external")]
                     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
                         arguments 'NDK_MODULE_PATH=' + module_paths.join(";")
                     }
@@ -127,6 +127,12 @@ android.applicationVariants.all { variant ->
         copy {
             from "${sourceDir}/main.js"
             from "${sourceDir}/project.json"
+            into outputDir
+        }
+
+        copy {
+            from "${sourceDir}/cocos3d-js.js"
+            from "${sourceDir}/cocos3d-js.js"
             into outputDir
         }
     }
